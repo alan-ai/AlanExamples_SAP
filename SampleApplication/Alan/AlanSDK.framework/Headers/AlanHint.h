@@ -2,15 +2,14 @@
 //  AlanHint.h
 //  AlanSDK
 //
-//  Created by Sergey Yuryev on 23/08/2018.
-//  Copyright © 2018 synqq. All rights reserved.
+//  Copyright © 2019 Alan AI Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 /**
  AlanHint
- This class provides a view with hints which are created in Alan Tutor
+ This class provides a view with hints which are created in Alan Studio
  
  Usage:
  

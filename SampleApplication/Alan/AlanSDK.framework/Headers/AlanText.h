@@ -2,8 +2,7 @@
 //  AlanText.h
 //  AlanSDK
 //
-//  Created by Sergey Yuryev on 24/07/2018.
-//  Copyright © 2018 synqq. All rights reserved.
+//  Copyright © 2019 Alan AI Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

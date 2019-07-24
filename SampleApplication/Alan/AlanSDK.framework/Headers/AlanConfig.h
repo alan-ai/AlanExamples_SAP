@@ -2,8 +2,7 @@
 //  AlanConfig.h
 //  AlanSDK
 //
-//  Created by Sergey Yuryev on 14/08/2018.
-//  Copyright © 2018 synqq. All rights reserved.
+//  Copyright © 2019 Alan AI Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -35,7 +34,7 @@
 @property (nonatomic, strong, readonly, nullable) NSString* dialogId;
 
 /**
- Given data object which passed to Alan Tutor project. Read only
+ Given data object which passed to Alan Studio project. Read only
  */
 @property (nonatomic, strong, readonly, nullable) NSDictionary* dataObject;
 
@@ -57,7 +56,7 @@
  Creates AlanConfig object with key and data object
 
  @param key Project key
- @param dataObject Given data object which will be passed to Alan Tutor project
+ @param dataObject Given data object which will be passed to Alan Studio project
  @return AlanConfig object
  */
 - (nonnull instancetype)initWithKey:(nonnull NSString *)key dataObject:(nullable NSDictionary *)dataObject;
@@ -76,7 +75,7 @@
 
  @param key Project key
  @param isButtonDraggable Indicates that button is draggable over a screen
- @param dataObject Given data object which will be passed to Alan Tutor project
+ @param dataObject Given data object which will be passed to Alan Studio project
  @return AlanConfig object
  */
 - (nonnull instancetype)initWithKey:(nonnull NSString *)key isButtonDraggable:(BOOL)isButtonDraggable dataObject:(nullable NSDictionary *)dataObject;
@@ -95,7 +94,7 @@
 
  @param key Project key
  @param host Host to connect
- @param dataObject Given data object which will be passed to Alan Tutor project
+ @param dataObject Given data object which will be passed to Alan Studio project
  @return AlanConfig object
  */
 - (nonnull instancetype)initWithKey:(nonnull NSString *)key host:(nullable NSString *)host dataObject:(nullable NSDictionary *)dataObject;
@@ -106,7 +105,7 @@
 
  @param key Project key
  @param host Host to connect
- @param dataObject Given data object which will be passed to Alan Tutor project
+ @param dataObject Given data object which will be passed to Alan Studio project
  @param dialogId Dialog Id
  @return AlanConfig object
  */
@@ -128,7 +127,7 @@
  @param key Project key
  @param host Host to connect
  @param isButtonDraggable Indicates that button is draggable over a screen
- @param dataObject Given data object which will be passed to Alan Tutor project
+ @param dataObject Given data object which will be passed to Alan Studio project
  @return AlanConfig object
  */
 - (nonnull instancetype)initWithKey:(nonnull NSString *)key host:(nullable NSString *)host isButtonDraggable:(BOOL)isButtonDraggable dataObject:(nullable NSDictionary *)dataObject;
