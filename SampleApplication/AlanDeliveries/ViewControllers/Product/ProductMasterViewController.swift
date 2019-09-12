@@ -146,6 +146,20 @@ class ProductMasterViewController: FUIFormTableViewController, SAPFioriLoadingIn
         
     }
     
+    internal func showProductCard(_ id: String) {
+        var index = 0
+        for entry in self.allEntities {
+            if let entryId = entry.productID {
+                if entryId == id {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                    self.performSegue(withIdentifier: "showDetail", sender: self)
+                }
+                index += 1
+            }
+        }
+    }
+    
     internal func showProductIds(_ ids: [String]) {
         let filtered = self.allEntities.filter {
             if let productId = $0.productID, ids.contains(productId) {

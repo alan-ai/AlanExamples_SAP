@@ -28,6 +28,7 @@ protocol ProductViewDelegate {
     func highlightProductId(_ id: String?)
     func showProductCategory(_ category: String)
     func showProductIds(_ ids: [String])
+    func showProductCard(_ id: String)
 }
 
 protocol NavigateViewDelegate {
@@ -198,6 +199,25 @@ extension UIWindow {
                 if let d = self.productViewDelegate {
                     d.showProductIds(value)
                 }
+            }
+        }
+        else if command == "showProductCard" {
+            if let p = self.productViewDelegate {
+                DispatchQueue.main.async {
+                    if let value = json["value"] as? String {
+                        p.showProductCard(value)
+                    }
+                }
+            }
+            else if let d = self.navigateViewDelegate {
+                d.navigateCategory("Product")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    if let value = json["value"] as? String {
+                        if let p = self.productViewDelegate {
+                            p.showProductCard(value)
+                        }
+                    }
+                })
             }
         }
         else if command == "highlightProductId" {
