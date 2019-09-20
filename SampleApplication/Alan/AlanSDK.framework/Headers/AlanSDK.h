@@ -10,6 +10,18 @@
 #import "AlanText.h"
 #import "AlanHint.h"
 
+/// AlanButton states
+typedef NS_ENUM(NSInteger, AlanSDKButtonState) {
+    AlanSDKButtonStateOffline,
+    AlanSDKButtonStateConnecting,
+    AlanSDKButtonStateOnline,
+    AlanSDKButtonStateIdle,
+    AlanSDKButtonStateListen,
+    AlanSDKButtonStateProcess,
+    AlanSDKButtonStateReply,
+    AlanSDKButtonStateNoPermission,
+};
+
 //! Project version number for AlanSDK.
 FOUNDATION_EXPORT double AlanSDKVersionNumber;
 
